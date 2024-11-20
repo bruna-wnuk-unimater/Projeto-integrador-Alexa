@@ -21,8 +21,8 @@
 **SinricPro.h e SinricProSwitch.h:** Bibliotecas para integração com a plataforma SinricPro, permitindo o controle de dispositivos IoT via Alexa ou Google Home.
 
 ``` cpp 
-const char* ssid = "Bruna";
-const char* password = "rvwa0432222";
+const char* ssid = "usuario";
+const char* password = "senha";
 ```
 **ssid:** Nome da rede Wi-Fi à qual o ESP8266 deve se conectar.
 
@@ -109,3 +109,5 @@ void loop() {
 - Monitora e processa eventos recebidos da plataforma SinricPro.
 
 - Mantém o dispositivo em comunicação contínua com os servidores.
+
+# Arquitetura

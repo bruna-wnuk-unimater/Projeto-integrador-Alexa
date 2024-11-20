@@ -4,8 +4,8 @@
 #include <SinricProSwitch.h>
 
 // Configurações Wi-Fi
-const char* ssid = "Bruna";
-const char* password = "rvwa0432222";
+const char* ssid = "usuario";
+const char* password = "senha";
 
 // Configurações SinricPro
 const char* appKey = "9a8a0cc5-80da-413e-96af-cb628ffd4bd4";
