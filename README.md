@@ -143,7 +143,7 @@ A arquitetura do sistema é composta pelos seguintes componentes principais:
 
 Abaixo está o GIF do sistema em funcionamento:
 
-![Gif do Funcionamento](funcionamento.gif)
+![](funcionamento.gif)
 
 ## Funcionamento do Sistema
 
