@@ -111,3 +111,43 @@ void loop() {
 - Mantém o dispositivo em comunicação contínua com os servidores.
 
 # Arquitetura
+
+Este projeto demonstra uma arquitetura de automação utilizando o ESP8266, conectividade Wi-Fi e a plataforma **SinricPro** para integração com assistentes virtuais, como a Alexa.
+
+## Visão Geral
+
+A arquitetura do sistema é composta pelos seguintes componentes principais:
+
+### 1. **Hardware**
+- **ESP8266:** Microcontrolador responsável pela conectividade Wi-Fi e pelo processamento dos comandos.
+- **LED interno (LED_BUILTIN):** Representa o dispositivo controlado no exemplo.
+
+### 2. **Conexão Wi-Fi**
+- O ESP8266 conecta-se a uma rede Wi-Fi utilizando as credenciais fornecidas no código.
+- O dispositivo aguarda estabelecer a conexão antes de iniciar as funções de controle remoto.
+
+### 3. **Plataforma SinricPro**
+- A plataforma **SinricPro** facilita a comunicação entre dispositivos IoT e assistentes virtuais.
+- O dispositivo é identificado por:
+  - **Device ID**: Identificador único.
+  - **App Key** e **App Secret**: Credenciais para autenticação com a nuvem.
+
+### 4. **Callback de Controle**
+- A função `onPowerState` é chamada sempre que um comando é recebido da plataforma.
+- No exemplo, o estado do LED interno é alterado (ligado/desligado) conforme o comando recebido.
+
+### 5. **Ciclo de Execução**
+- A função `SinricPro.handle()` é chamada continuamente no loop principal, processando eventos e mantendo a conexão ativa com a plataforma.
+
+## Esquema da Arquitetura
+
+Abaixo está o GIF do sistema em funcionamento:
+
+![Gif do Funcionamento](funcionamento.gif)
+
+## Funcionamento do Sistema
+
+1. O ESP8266 conecta-se à rede Wi-Fi.
+2. Após conectado, registra-se na plataforma SinricPro.
+3. Comandos de controle são enviados pelo assistente virtual (como Alexa) para a nuvem.
+4. A plataforma SinricPro retransmite os comandos para o ESP8266, que altera o estado do dispositivo (LED interno no exemplo).
